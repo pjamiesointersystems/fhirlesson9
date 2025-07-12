@@ -1,0 +1,164 @@
+###
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/metadata
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+
+###
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Patient?_has:Condition:patient:code=http://snomed.info/sct|15777000
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+
+###
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Observation?subject=Patient/12251&code=http://loinc.org|4548-4
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Observation?subject=Patient/12251&code=http://loinc.org|4548-4&value-quantity=ge6.0
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+####
+
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Patient?_has:Observation:subject:code=http://loinc.org|4548-4&_has:Observation:subject:value-quantity=ge6.0
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Patient?_has:MedicationRequest:subject:code=http://www.nlm.nih.gov/research/umls/rxnorm|895994&_has:Condition:subject:code=http://snomed.info/sct|195967001
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Patient?_has:Observation:subject:value-quantity=ge6.0
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Patient?_has:Observation:subject:value-quantity=ge6.0
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Patient?_has:Observation:subject:value-quantity=ge6.0
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Patient?_has:Observation:subject:value-quantity=ge6.0
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Condition?code=http://snomed.info/sct|15777000
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Observation?category=vital-signs&subject:Patient:Patient.name=Herrington&subject:Patient:Patient.given=John
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Observation?category=vital-signs&subject=Patient/70255
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Observation?code=http://loinc.org|29463-7&subject=Patient/70255
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Patient?name=Herrington&given=John
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+
+
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Procedure
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Procedure?code=http://snomed.info/sct|44950
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Device
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Device
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+
