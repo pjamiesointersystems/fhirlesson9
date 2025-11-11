@@ -22,52 +22,16 @@ Nurse Emily Carter, a diabetes specialist at Fairway Hospital, is tasked with id
 
 ---
 
-## 📘 Project Structure
+## Populate the FHIR Repository with Surgical Patients
 
-lesson-nine/
-├── README.md # This file
-├── fhirproblems.ipynb # Jupyter notebook with problem-solving exercises
-├── fhirproblems.http # Sample HTTP search queries for FHIR server
-├── searchtemplates.http # Reusable FHIR search templates
-├── Lab - FHIRPath and Search operations.pptx # Instructional slides
+Problem 7, requires analyzing patients with surgical conditions. Execute the POST command in fhirsurgbatch.http,
+a transaction batch file, first with the command POST http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4 to populate surgical procedures and their patients
+Next executute the POST command in fhirsurgbatchobs.http, a simple batch file, with the command POST POST http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4. THis file contains additional observations on these surgical patients. 
+These commands only need to be executed once, but without them you won't be able to find any surgical patients.
 
 
----
 
-## 🔍 Key Topics Covered
 
-- **FHIR Search Basics**  
-  E.g., `Patient?gender=female` or `Observation?code=4548-4&value-quantity=ge6.0`
-
-- **FHIRPath Essentials**  
-  E.g., `Patient.name.given`, `Observation.valueQuantity.value`
-
-- **Use of SNOMED and LOINC codes**  
-  E.g., SNOMED `15777000` for prediabetes; LOINC `4548-4` for HgbA1c
-
-- **Combining Python + FHIRPath**  
-  Execute and post-process search results using Python for sorting, comparison, and visualization.
-
----
-
-## 🧪 Problem Set Highlights
-
-1. **Find all patients with prediabetes** using the appropriate SNOMED code.
-2. **Retrieve HgbA1c observations** for a specific patient.
-3. **Extract and sort values** using FHIRPath and Python.
-4. **Apply filters** to search results (e.g., `value-quantity=ge6.0`).
-5. **Compare cohorts** based on lab values vs condition codes.
-
-Additional problems introduce **PreventHF**, a startup using FHIR to monitor CHF patients, applying similar techniques to track weight fluctuations and prevent readmission.
-
----
-
-## 🛠 Requirements
-
-To run the lesson locally, install the following Python packages:
-
-```bash
-pip install requests fhir.resources matplotlib
 
 ---
 
@@ -142,6 +106,9 @@ To run the lesson locally, install the following Python packages:
 
 ```bash
 pip install requests fhir.resources matplotlib
+
+---
+
 ## 🔍 Key Topics Covered
 
 - **FHIR Search Basics**  
@@ -171,6 +138,26 @@ Additional problems introduce **PreventHF**, a startup using FHIR to monitor CHF
 ---
 
 ## 🛠 Requirements
+
+To run the lesson locally, install the following Python packages:
+
+```bash
+pip install requests fhir.resources matplotlib
+## 🔍 Key Topics Covered
+
+- **FHIR Search Basics**  
+  E.g., `Patient?gender=female` or `Observation?code=4548-4&value-quantity=ge6.0`
+
+- **FHIRPath Essentials**  
+  E.g., `Patient.name.given`, `Observation.valueQuantity.value`
+
+- **Use of SNOMED and LOINC codes**  
+  E.g., SNOMED `15777000` for prediabetes; LOINC `4548-4` for HgbA1c
+
+- **Combining Python + FHIRPath**  
+  Execute and post-process search results using Python for sorting, comparison, and visualization.
+
+---
 
 To run the lesson locally, install the following Python packages:
 
