@@ -1,3 +1,6 @@
+### Be sure to run first the file fhirsurgerybatchwithObservations.http to get new surgery patients with observations
+
+
 # FHIR Lesson 9: Search and FHIRPath in Clinical Problem Solving
 
 Welcome to Lesson 9 of the InterSystems FHIR Curriculum. This module is designed to teach practical applications of **FHIR Search** and **FHIRPath** through engaging clinical problem-solving scenarios. Students will gain hands-on experience constructing search queries, analyzing FHIR bundles, and extracting meaningful clinical insights using Python and Jupyter Notebooks.
